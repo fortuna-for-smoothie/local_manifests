@@ -32,7 +32,7 @@
   -->
 
   <!-- GcamGo package -->
-  <project path="packages/apps/GcamGo" name="foruna-for-smoothie/android_packages_apps_GcamGo" remote="github" />
+  <project path="packages/apps/GcamGo" name="fortuna-for-smoothie/android_packages_apps_GcamGo" remote="github" revision="lineage-18.1" />
 
   <!-- Grand Prime specific trees -->
   <project path="device/samsung/gprimelte-common" name="fortuna-for-smoothie/android_device_samsung_gprimelte-common" remote="github" revision="lineage-18.1"/>
