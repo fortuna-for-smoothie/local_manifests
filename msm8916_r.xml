@@ -19,6 +19,9 @@
 
   <project path="hardware/samsung" name="LineageOS/android_hardware_samsung" remote="github" revision="lineage-18.1"/>
 
+  <remove-project name="LineageOS/android_vendor_apn" />
+  <project name="LineageOS/android_vendor_apn" path="vendor/apn" remote="github" revision="cfcbd9d61d6c22e5b60b2f10274d6cd1ff460f5e" />
+
   <!-- safetynet fix -->
   <!--  
   <remove-project name="platform/system/security"/>
