@@ -23,7 +23,7 @@
   <project name="LineageOS/android_vendor_apn" path="vendor/apn" remote="github" revision="cfcbd9d61d6c22e5b60b2f10274d6cd1ff460f5e" />
 
   <remove-project name="LineageOS/android_build_soong" />
-  <project name="fortuna-for-smoothie/android_build_soong" path="build/soong" remote="github" revision="lineage-18.1" />
+  <project name="fortuna-for-smoothie/android_build_soong" path="build/soong" remote="github" revision="lineage-18.1" groups="pdk,tradefed" />
 
   <!-- safetynet fix -->
   <!--  

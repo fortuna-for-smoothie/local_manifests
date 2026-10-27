@@ -22,5 +22,11 @@ sudo apt install lib32ncurses5-dev libncurses5 libncurses5-dev
 # Start building
 source build/envsetup.sh
 lunch lineage_fortuna3g-userdebug
-...
+
+# Test if basic components are present
+# You may need to create an empty Android.bp file
+m -j4 nothing 
+
+# Start building an actual image
+m -j4 bacon
 ```
