@@ -32,18 +32,18 @@
   -->
 
   <!-- GcamGo package -->
-  <project path="packages/apps/GcamGo" name="fortuna-for-smoothie/android_packages_apps_GcamGo" remote="github" revision="lineage-18.1" />
+  <!-- <project path="packages/apps/GcamGo" name="fortuna-for-smoothie/android_packages_apps_GcamGo" remote="github" revision="lineage-18.1" /> -->
 
   <!-- Grand Prime specific trees -->
   <project path="device/samsung/gprimelte-common" name="fortuna-for-smoothie/android_device_samsung_gprimelte-common" remote="github" revision="lineage-18.1"/>
 
-  <project path="device/samsung/gprimeltexx" name="fortuna-for-smoothie/android_device_samsung_gprimeltexx" remote="github" revision="lineage-18.1"/>
+  <!-- <project path="device/samsung/gprimeltexx" name="fortuna-for-smoothie/android_device_samsung_gprimeltexx" remote="github" revision="lineage-18.1"/> -->
   <project path="device/samsung/fortuna3g" name="fortuna-for-smoothie/android_device_samsung_fortuna3g" remote="github" revision="lineage-18.1"/>
-  <project path="device/samsung/fortunave3g" name="fortuna-for-smoothie/android_device_samsung_fortunave3g" remote="github" revision="lineage-18.1"/>
-  <project path="device/samsung/fortunalteub" name="fortuna-for-smoothie/android_device_samsung_fortunalteub" remote="github" revision="lineage-18.1"/>
-  <project path="device/samsung/gprimelte" name="fortuna-for-smoothie/android_device_samsung_gprimelte" remote="github" revision="lineage-18.1"/>
-  <project path="device/samsung/fortuna3gdtv" name="fortuna-for-smoothie/android_device_samsung_fortuna3gdtv" remote="github" revision="lineage-18.1"/>
-  <project path="device/samsung/gprimeltetfnvzw" name="fortuna-for-smoothie/android_device_samsung_gprimeltetfnvzw" remote="github" revision="lineage-18.1"/>
-  <project path="device/samsung/gprimelteusc" name="fortuna-for-smoothie/android_device_samsung_gprimelteusc" remote="github" revision="lineage-18.1"/>
-  <project path="device/samsung/fortunaltedx" name="fortuna-for-smoothie/android_device_samsung_fortunaltedx" remote="github" revision="lineage-18.1"/>
+  <!-- <project path="device/samsung/fortunave3g" name="fortuna-for-smoothie/android_device_samsung_fortunave3g" remote="github" revision="lineage-18.1"/> -->
+  <!-- <project path="device/samsung/fortunalteub" name="fortuna-for-smoothie/android_device_samsung_fortunalteub" remote="github" revision="lineage-18.1"/> -->
+  <!-- <project path="device/samsung/gprimelte" name="fortuna-for-smoothie/android_device_samsung_gprimelte" remote="github" revision="lineage-18.1"/> -->
+  <!-- <project path="device/samsung/fortuna3gdtv" name="fortuna-for-smoothie/android_device_samsung_fortuna3gdtv" remote="github" revision="lineage-18.1"/> -->
+  <!-- <project path="device/samsung/gprimeltetfnvzw" name="fortuna-for-smoothie/android_device_samsung_gprimeltetfnvzw" remote="github" revision="lineage-18.1"/> -->
+  <!-- <project path="device/samsung/gprimelteusc" name="fortuna-for-smoothie/android_device_samsung_gprimelteusc" remote="github" revision="lineage-18.1"/> -->
+  <!-- <project path="device/samsung/fortunaltedx" name="fortuna-for-smoothie/android_device_samsung_fortunaltedx" remote="github" revision="lineage-18.1"/> -->
 </manifest>
