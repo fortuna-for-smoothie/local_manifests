@@ -5,7 +5,7 @@
 
   <!-- Samsung MSM8916 common repos -->
   <project path="device/samsung/msm8916-common" name="fortuna-for-smoothie/android_device_samsung_msm8916-common" remote="github" revision="lineage-18.1"/>
-  <project path="kernel/samsung/msm8916" name="fortuna-for-smoothie/android_kernel_samsung_msm8916" remote="github" revision="lineage-18.1"/>
+  <project path="kernel/samsung/msm8916" name="fortuna-for-smoothie/android_kernel_samsung_msm8916" remote="github" revision="hybris-18.1"/>
   <project path="vendor/samsung" name="fortuna-for-smoothie/proprietary_vendor_samsung" remote="github" revision="lineage-18.1exp"/>
 
   <!-- LineageOS repos -->
