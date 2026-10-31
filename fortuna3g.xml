@@ -50,4 +50,8 @@
 
   <remove-project path="external/chromium-webview/patches" />
   <project path="external/chromium-webview/patches" name="LineageOS/android_external_chromium-webview_patches" remote="github" revision="aa2678069d83bc7984ae8c50e473de8db2970f8b" />
+
+  <project path="rpm/" name="fortuna-for-smoothie/droid-hal-fortuna3g" revision="master" />
+  <project path="hybris/droid-configs" name="fortuna-for-smoothie/droid-config-fortuna3g" revision="master" />
+  <project path="hybris/droid-hal-version-hammerhead" name="fortuna-for-smoothie/droid-hal-version-fortuna3g" revision="master" />
 </manifest>
