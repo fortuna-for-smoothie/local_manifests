@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!-- TWRP source code -->
-  <!--  
-  <project path="bootable/recovery-twrp" name="TeamWin/android_bootable_recovery" remote="github" revision="android-11"/> 
-  -->
+  <!-- <project path="bootable/recovery-twrp" name="TeamWin/android_bootable_recovery" remote="github" revision="android-11"/> -->
 
   <!-- Samsung MSM8916 common repos -->
   <project path="device/samsung/msm8916-common" name="fortuna-for-smoothie/android_device_samsung_msm8916-common" remote="github" revision="lineage-18.1"/>
@@ -26,10 +24,8 @@
   <project name="fortuna-for-smoothie/android_build_soong" path="build/soong" remote="github" revision="lineage-18.1" groups="pdk,tradefed" />
 
   <!-- safetynet fix -->
-  <!--  
-  <remove-project name="platform/system/security"/>
-  <project path="system/security" name="Gabboxl/android_system_security" groups="pdk" remote="github" revision="rvc" /> 
-  -->
+  <!-- <remove-project name="platform/system/security"/> -->
+  <!-- <project path="system/security" name="Gabboxl/android_system_security" groups="pdk" remote="github" revision="rvc" />  -->
 
   <!-- GcamGo package -->
   <!-- <project path="packages/apps/GcamGo" name="fortuna-for-smoothie/android_packages_apps_GcamGo" remote="github" revision="lineage-18.1" /> -->
@@ -46,4 +42,8 @@
   <!-- <project path="device/samsung/gprimeltetfnvzw" name="fortuna-for-smoothie/android_device_samsung_gprimeltetfnvzw" remote="github" revision="lineage-18.1"/> -->
   <!-- <project path="device/samsung/gprimelteusc" name="fortuna-for-smoothie/android_device_samsung_gprimelteusc" remote="github" revision="lineage-18.1"/> -->
   <!-- <project path="device/samsung/fortunaltedx" name="fortuna-for-smoothie/android_device_samsung_fortunaltedx" remote="github" revision="lineage-18.1"/> -->
+
+  <!-- Sailfish OS repos -->
+  <remove-project path="hybris/hybris-boot" />
+  <project path="hybris/hybris-boot" name="fortuna-for-smoothie/hybris-boot" remote="github" revision="hybris-18.1" />
 </manifest>
