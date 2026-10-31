@@ -44,6 +44,10 @@
   <!-- <project path="device/samsung/fortunaltedx" name="fortuna-for-smoothie/android_device_samsung_fortunaltedx" remote="github" revision="lineage-18.1"/> -->
 
   <!-- Sailfish OS repos -->
-  <remove-project path="hybris/hybris-boot" />
+
+  <remove-project name="mer-hybris/hybris-boot" />
   <project path="hybris/hybris-boot" name="fortuna-for-smoothie/hybris-boot" remote="github" revision="hybris-18.1" />
+
+  <remove-project path="external/chromium-webview/patches" />
+  <project path="external/chromium-webview/patches" name="LineageOS/android_external_chromium-webview_patches" remote="github" revision="aa2678069d83bc7984ae8c50e473de8db2970f8b" />
 </manifest>
