@@ -1,6 +1,8 @@
-# Notes on building and porting Sailfish OS for fortuna3g on hybris-18.1
+# Sailfish OS 5.1.0.11
 
-## Before making hybris-hal and droidmedia
+Notes on building and porting Sailfish OS for fortuna3g on hybris-18.1
+
+### Before making hybris-hal and droidmedia
 
 Since hybris 16 you'll need to clone libhybris manually before building hybris-hal:
 
@@ -11,7 +13,7 @@ cd $ANDROID_ROOT
 hybris-patches/apply-patches.sh --mb
 ```
 
-## defconfig location
+### defconfig location
 
 Target defconfig defined in here
 ```sh
@@ -22,7 +24,7 @@ Target defconfig itself is this
 code kernel/samsung/msm8916/arch/arm/configs/msm8916_sec_defconfig
 ```
 
-## Packaging droid-hal expects python
+### Packaging droid-hal expects python
 
 During `rpm/dhd/helpers/build_packages.sh --droid-hal` you will likely encounter the following:
 
@@ -50,7 +52,7 @@ sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in python
 Thanks to [question](https://piggz.co.uk/sailfishos-porters-archive/index.php?log=2024-12-14.txt#line26)
 and [answer](https://piggz.co.uk/sailfishos-porters-archive/index.php?log=2024-12-04.txt#line22)
 
-## Packaging droid-hal fails
+### Packaging droid-hal fails
 
 Build with `make hybris-hal` in hadk on top of hybris-18.1 currently does not put anything into here:
 
@@ -70,7 +72,7 @@ touch $ANDROID_ROOT/out/target/product/fortuna3g/root/dummy.rc
 rpm/dhd/helpers/build_packages.sh --droid-hal
 ```
 
-## Failed build dependencies while packaging --version
+### Failed build dependencies while packaging --version
 
 While building with `--version` you will encounter an error like this:
 
