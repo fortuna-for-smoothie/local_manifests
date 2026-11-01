@@ -19,7 +19,7 @@ Target defconfig itself is this
 code kernel/samsung/msm8916/arch/arm/configs/msm8916_sec_defconfig
 ```
 
-## Troubleshoot building userspace packages
+## Packaging droid-hal expects python
 
 During `rpm/dhd/helpers/build_packages.sh --droid-hal` you will likely encounter the following:
 
@@ -45,3 +45,20 @@ sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in python
 
 Thansk to [question](https://piggz.co.uk/sailfishos-porters-archive/index.php?log=2024-12-14.txt#line26)
 and [answer](https://piggz.co.uk/sailfishos-porters-archive/index.php?log=2024-12-04.txt#line22)
+
+## Packaging droid-hal fails
+
+Build with `make hybris-hal` in hadk on top of hybris-18.1 currently does not put anything into here:
+
+```sh
+$ANDROID_ROOT/out/target/product/fortuna3g/root/
+```
+
+but the build script expects at least one .rc file in this directory. Currently the workaround is to create an empty dummy .rc file and call it a day. Also we use a fork of droid-hal-hal-device with patches to the build script commenting out other related dirs and files. Execute this for a fix:
+
+```sh
+# Create an empty rc file, if not present already
+touch $ANDROID_ROOT/out/target/product/fortuna3g/root/dummy.rc
+# Package droid-hal
+rpm/dhd/helpers/build_packages.sh --droid-hal
+```
