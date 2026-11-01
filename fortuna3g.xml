@@ -53,5 +53,5 @@
 
   <project path="rpm/" name="fortuna-for-smoothie/droid-hal-fortuna3g" revision="master" />
   <project path="hybris/droid-configs" name="fortuna-for-smoothie/droid-config-fortuna3g" revision="master" />
-  <project path="hybris/droid-hal-version-hammerhead" name="fortuna-for-smoothie/droid-hal-version-fortuna3g" revision="master" />
+  <project path="hybris/droid-hal-version-fortuna3g" name="fortuna-for-smoothie/droid-hal-version-fortuna3g" revision="master" />
 </manifest>
