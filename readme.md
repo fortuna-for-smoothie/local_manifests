@@ -2,6 +2,49 @@
 
 Notes on building and porting Sailfish OS for fortuna3g on hybris-18.1
 
+### All core commands for building varios components
+
+Building the kernel:
+
+```sh
+# Inside Platform SDK
+
+cd $ANDROID_ROOT
+ubu-chroot -r $PLATFORM_SDK_ROOT/sdks/ubuntu
+source build/envsetup.sh
+breakfast $DEVICE
+make -j$(nproc --all) hybris-hal droidmedia
+```
+
+Building the userspace packages:
+
+```sh
+# Inside Platform SDK
+
+cd $ANDROID_ROOT
+
+rpm/dhd/helpers/build_packages.sh --droid-hal
+rpm/dhd/helpers/build_packages.sh --configs
+rpm/dhd/helpers/build_packages.sh --mw
+rpm/dhd/helpers/build_packages.sh --gg
+rpm/dhd/helpers/build_packages.sh --version
+```
+
+Building the final image:
+
+```sh
+# Inside Platform SDK
+
+cd $ANDROID_ROOT
+
+# Set the version of your choosing, latest is strongly preferred
+# (check with "Sailfish OS version" link above)
+export RELEASE=5.1.0.11
+# EXTRA_NAME adds your custom tag. It doesn't support '.' dots in it!
+export EXTRA_NAME=-Smooth-E-version-0-1
+rpm/dhd/helpers/build_packages.sh --mic
+```
+
 ### Before making hybris-hal and droidmedia
 
 Since hybris 16 you'll need to clone libhybris manually before building hybris-hal:
