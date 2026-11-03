@@ -71,3 +71,53 @@ touch $ANDROID_ROOT/out/target/product/fortuna3g/root/dummy.rc
 # Package droid-hal
 rpm/dhd/helpers/build_packages.sh --droid-hal
 ```
+
+### Getting telnet under WSL
+
+In case you are using WSL, this how you get telnet set up and connect to your device. Thanks to [this SailfishOS Forum answer](https://forum.sailfishos.org/t/jolla-phone-2026-windows-11-has-anyone-successfully-used-usb-developer-mode-rndis/30616/6).
+
+First, get latest usbipd-win from GitHub and install it: https://github.com/dorssel/usbipd-win
+
+Second, you will need to compile and enable a module for usb networking to work under WSL. Execute these:
+
+```sh
+cd $HOME
+
+# Clone and build the module, tested on official Ubutnu 20.04 for WSL
+sudo apt update
+sudo apt install -y build-essential flex bison libssl-dev libelf-dev bc dwarves git usbutils
+git clone --depth 1 --branch linux-msft-wsl-$(uname -r | cut -d- -f1) \
+    https://github.com/microsoft/WSL2-Linux-Kernel.git
+cd WSL2-Linux-Kernel
+zcat /proc/config.gz > .config
+scripts/config --module USB_NET_RNDIS_HOST
+make olddefconfig
+make modules_prepare
+make M=drivers/net/usb modules KBUILD_MODPOST_WARN=1
+
+# Enable the kernel module
+sudo modprobe usbnet
+sudo rmmod rndis_host cdc_ncm cdc_ether 2>/dev/null
+sudo insmod ~/WSL2-Linux-Kernel/drivers/net/usb/cdc_ether.ko
+sudo insmod ~/WSL2-Linux-Kernel/drivers/net/usb/rndis_host.ko
+```
+
+When your device is connected, attach it to WSL. You can get the bus id with `usbipd list`. You may need to bind the connection before attaching. usbipd requires administrator access.
+
+```bat
+usbipd attach --wsl --busid 2-2
+```
+
+When attached, and if telnet is advertised by the device, `ip ad` will display and interface, for example `usb0`.
+We need to enable it and add an ip:
+
+```sh
+sudo ip link set usb0 up
+sudo ip addr add 192.168.2.14/24 dev usb0
+```
+
+Next you can use telnet as per the HADK handbook. For example:
+
+```sh
+telnet 192.168.2.15 23
+```
